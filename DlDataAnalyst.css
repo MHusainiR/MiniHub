@@ -1,0 +1,246 @@
+/* --- Reset & Global Style --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #9ECBF7; /* Background biru langit sesuai gambar */
+    color: #333;
+}
+
+/* --- Header Navigation --- */
+header {
+    background-color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ff9f43;
+    line-height: 1;
+}
+.logo-icon { font-size: 18px; margin-bottom: 2px; }
+.logo-text { font-size: 10px; font-weight: 800; color: #2c3e50; display: flex; flex-direction: column; text-align: center;}
+
+.nav-menu { display: flex; gap: 30px; }
+.nav-menu a { text-decoration: none; color: #333; font-weight: 500; font-size: 14px; }
+
+.user-icons { display: flex; gap: 20px; font-size: 20px; color: #333; }
+
+/* --- Layout Utama --- */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Back Header */
+.back-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+.back-header i { font-size: 24px; cursor: pointer; }
+.back-header h1 { font-size: 28px; font-weight: 700; margin: 0; }
+
+/* Grid System (2 Kolom) */
+.content-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Kolom kiri 2x lebih besar dari kanan */
+    gap: 25px;
+}
+
+/* --- Styles Kartu Umum --- */
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    margin-bottom: 25px;
+}
+
+/* --- Kolom Kiri --- */
+
+/* Banner Style */
+.banner-wrapper {
+    width: 100%;
+    height: 320px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: #e3f2fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Service Info */
+.tag-black {
+    background-color: black;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.service-info h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.rating-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #555;
+}
+.stars i { color: #f1c40f; } /* Bintang kuning */
+
+/* Description Card */
+.pill-title {
+    background-color: #fcfcfc;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 50px; /* Pill shape */
+    margin-bottom: 25px;
+    border: 1px solid #f0f0f0;
+}
+
+.desc-body h3 { font-size: 15px; margin-bottom: 10px; font-weight: 600; }
+.desc-body p { font-size: 13px; line-height: 1.6; color: #555; margin-bottom: 15px; }
+
+.line-separator { height: 1px; background-color: #eee; margin: 15px 0; }
+
+.benefits-list { list-style: none; padding: 0; }
+.benefits-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #444;
+}
+.benefits-list li i { color: #2ecc71; font-size: 16px; } /* Icon Ceklis Hijau */
+
+
+/* --- Kolom Kanan (Sidebar) --- */
+
+/* Price Card */
+.price-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.price-nominal { color: #1a66ff; font-weight: 700; font-size: 16px; }
+
+.work-duration {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn-blue {
+    width: 100%;
+    background-color: #1a66ff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.btn-grey {
+    width: 100%;
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Profile Card */
+.profile-card h3 { font-size: 14px; margin-bottom: 15px; }
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.avatar-box {
+    width: 40px;
+    height: 40px;
+    background-color: #eee;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 13px;
+    color: #333;
+}
+
+.profile-names strong { font-size: 14px; display: block; }
+.profile-names small { font-size: 11px; color: #666; }
+
+.profile-meta {
+    list-style: none;
+    padding: 0;
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 15px;
+}
+.profile-meta li { margin-bottom: 6px; display: flex; gap: 10px; }
+.profile-meta i { width: 15px; text-align: center; }
+
+.bio-text { font-size: 12px; color: #666; line-height: 1.5; margin-bottom: 20px; }
+
+.stats-grid {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.stat-box small { font-size: 11px; color: #777; display: block; margin-bottom: 2px; }
+.stat-box strong { font-size: 14px; color: #1a66ff; }
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .content-layout { grid-template-columns: 1fr; }
+    .banner-wrapper { height: 200px; }
+}

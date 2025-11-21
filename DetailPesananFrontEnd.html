@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Pesanan - Mini Hub</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="DetailPesanan.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="Explore.html">
+                <img src="Img/Logo.png" class="logo" alt="MiniHub" style="width:23px;height:41px;">
+            </a>
+        </div>
+        <nav class="nav-menu">
+            <a href="Explore.html">Explore Service</a>
+            <a href="PesananSaya.html" class="active">Pesanan Saya</a>
+        </nav>
+        <div class="user-icons">
+            <a href="#">
+                <i class="fa-regular fa-bell"></i>
+            </a>
+            <a href="Profil.html">
+                <i class="fa-regular fa-user"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-title">
+            <a href="PesananSaya.html">
+             <i class="fa-solid fa-arrow-left"></i>
+            </a>    
+            <h1>Detail Pesanan</h1>
+        </div>
+
+        <section class="card">
+            <h3 class="card-title">Ringkasan Pesanan</h3>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <label>Order ID</label>
+                    <div class="value text-grey">#MINI4679</div>
+                </div>
+                <div class="summary-item">
+                    <label>Freelancer</label>
+                    <div class="value text-dark-grey">Liam</div>
+                </div>
+                <div class="summary-item">
+                    <label>Tanggal Pesan</label>
+                    <div class="value text-dark-grey">20-November-2025</div>
+                </div>
+                <div class="summary-item">
+                    <label>Harga</label>
+                    <div class="value text-dark-grey">Rp200.000</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h3 class="card-title">Informasi Pesanan</h3>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Layanan</label>
+                    <input type="text" value="Frontend Developer" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Deadline</label>
+                    <input type="text" value="25 November 2025" readonly>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Deskripsi Kebutuhan</label>
+                <div class="textarea-mock">Deskripsi</div>
+            </div>
+
+            <div class="form-group">
+                <label>File dari Klien</label>
+                <div class="file-box">
+                    <span>File (1).pdf</span>
+                    <i class="fa-regular fa-file"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h3 class="card-title">Timeline Pesanan</h3>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="icon-wrapper success">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <div class="content">
+                        <h4>Pesanan Dibuat</h4>
+                        <p>10:30 - 20 November 2025</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="icon-wrapper pending">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <div class="content">
+                        <h4>Pesanan Dikirim</h4>
+                        <p>TBD</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

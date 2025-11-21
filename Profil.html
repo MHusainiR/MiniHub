@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Mini Hub</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="Profil.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="Explore.html">
+                <img src="Img/Logo.png" class="logo" alt="MiniHub" style="width:23px;height:41px;">
+            </a>
+        </div>
+        <nav class="nav-menu">
+            <a href="Explore.html">Explore Service</a>
+            <a href="PesananSaya.html" class="active">Pesanan Saya</a>
+        </nav>
+        <div class="user-icons">
+            <a href="#">
+                <i class="fa-regular fa-bell"></i>
+            </a>
+            <a href="#" class="active">
+                <i class="fa-regular fa-user"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="page-title">Profil</h1>
+
+        <div class="profile-card">
+            
+            <div class="left-section">
+                <div class="image-wrapper">
+                    <img src="Img/profil.png" alt="Profile Picture">
+                </div>
+                
+                <div class="action-links">
+                    <a href="#" class="action-btn">
+                        <i class="fa-regular fa-pen-to-square"></i> Edit Profile
+                    </a>
+                    <a href="index.html" class="action-btn">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out
+                    </a>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <form>
+                    <div class="form-group">
+                        <label>Nama</label>
+                        <input type="text" placeholder="Nama Lengkap" class="input-field">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="example@gmail.com" class="input-field">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nomor Telepon</label>
+                        <input type="text" placeholder="0812345679" class="input-field">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Bio</label>
+                        <textarea placeholder="Bio" class="input-field bio-box"></textarea>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

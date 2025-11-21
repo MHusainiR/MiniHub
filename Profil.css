@@ -1,0 +1,191 @@
+/* --- Reset & Global --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #DCEEFF; /* Warna background biru muda halaman */
+    color: #333;
+    min-height: 100vh;
+}
+
+/* --- Header / Navbar --- */
+header {
+    background-color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ff9f43;
+    line-height: 1;
+}
+.logo-icon { font-size: 18px; margin-bottom: 2px; }
+.logo-text { 
+    font-size: 10px; 
+    font-weight: 800; 
+    color: #2c3e50; 
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+}
+
+.nav-menu { display: flex; gap: 40px; }
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.user-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+/* --- Layout Utama --- */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* --- Kartu Profil --- */
+.profile-card {
+    background-color: #9ACBEF; /* Warna Biru khas Card di gambar */
+    border: 1px solid #333; /* Border tipis hitam */
+    border-radius: 10px;
+    padding: 50px;
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Bagian Kiri (Foto & Tombol) */
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.image-wrapper {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #666; /* Border halus di sekitar foto */
+    margin-bottom: 30px;
+    background: #ccc;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.action-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding-left: 20px; /* Sedikit offset agar sejajar visual */
+}
+
+.action-btn {
+    text-decoration: none;
+    color: #000;
+    font-size: 24px; /* Ukuran font besar sesuai gambar */
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: color 0.2s;
+}
+
+.action-btn:hover {
+    color: #333;
+}
+
+.action-btn i {
+    font-size: 22px;
+}
+
+/* Bagian Kanan (Form) */
+.right-section {
+    flex: 2;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 400;
+    color: #000;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #EAEAEA; /* Warna abu-abu input field */
+    border: 1px solid #777; /* Border abu tua */
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555;
+    outline: none;
+}
+
+.input-field::placeholder {
+    color: #777;
+}
+
+.bio-box {
+    height: 120px;
+    resize: none; /* Agar tidak bisa ditarik ukurannya */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .profile-card {
+        flex-direction: column;
+        padding: 30px;
+    }
+    
+    .left-section {
+        width: 100%;
+        margin-bottom: 30px;
+        padding-top: 0;
+    }
+    
+    .action-links {
+        align-items: center;
+        padding-left: 0;
+    }
+}

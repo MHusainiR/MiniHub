@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan - Mini Hub</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="OfCopywriter.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="Explore.html">
+                <img src="Img/Logo.png" class="logo" alt="MiniHub" style="width:23px;height:41px;">
+            </a>
+        </div>
+        <nav class="nav-menu">
+            <a href="Explore.html">Explore Service</a>
+            <a href="PesananSaya.html">Pesanan Saya</a>
+        </nav>
+        <div class="user-icons">
+            <a href="#">
+                <i class="fa-regular fa-bell"></i>
+            </a>
+            <a href="Profil.html">
+                <i class="fa-regular fa-user"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="back-header">
+            <a href="DlCopyWriter.html">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <h1>Form Pemesanan Layanan</h1>
+        </div>
+
+        <div class="content-grid">
+            
+            <div class="left-column">
+                
+                <div class="service-banner">
+                    <strong>CopyWriter</strong><br>
+                    <small>oleh Ajeng</small>
+                </div>
+
+                <div class="card form-card">
+                    <h3>Detail Kebutuhan Proyek</h3>
+                    
+                    <div class="form-group">
+                        <label>Judul Pesanan *</label>
+                        <input type="text" placeholder="Contoh: Caption Instagram untuk Produk Skincare">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Deskripsi Kebutuhan *</label>
+                        <textarea placeholder="• Jelaskan detail kebutuhan Anda, seperti:
+• Topik/Produk yang dibahas
+• Target Audiens (misal: Remaja wanita)
+• Tone of Voice (Lucu, Serius, atau Persuasif)
+• Call to Action (Ajak beli, ajak komen, dll)
+• Keyword wajib (untuk SEO)"></textarea>
+                        <div class="char-count">Minimal 50 karakter</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Deadline Pengerjaan *</label>
+                        <input type="text" disabled class="input-disabled">
+                        <div class="input-note">Estimasi pengerjaan: 3-5 hari</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Upload File Pendukung (Opsional)</label>
+                        <div class="upload-area">
+                            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                            <p>Klik untuk upload atau drag & drop</p>
+                            <small>PNG, JPG, PDF maksimal 10MB</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card confirm-card">
+                    <h3>Konfirmasi & Pembayaran</h3>
+                    
+                    <div class="warning-box">
+                        <i class="fa-regular fa-comment-dots"></i>
+                        <div>
+                            <strong>Pembayaran via WhatsApp</strong>
+                            <p>Setelah submit pesanan, Anda akan diarahkan untuk menghubungi penyedia layanan via WhatsApp untuk konfirmasi pesanan dan pembayaran.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-box">
+                        <div class="contact-icon">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-info">
+                            <strong>Amanda Septiani</strong>
+                            <span><i class="fa-solid fa-phone"></i> +62 812-3456-7890</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-note">
+                        Hubungi penyedia layanan untuk:
+                        <ul>
+                            <li>• Konfirmasi detail pesanan</li>
+                            <li>• Informasi metode pembayaran</li>
+                            <li>• Diskusi kebutuhan lebih lanjut</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="btn-submit" onclick="window.location.href='DetailPesananWriter.html'">Submit Pesanan & Hubungi Penyedia</button>
+
+            </div>
+
+            <div class="right-column">
+                
+                <div class="card summary-card">
+                    <h3>Ringkasan Pesanan</h3>
+                    
+                    <div class="summary-item service-name">
+                        <small>Layanan</small>
+                        <strong>CopyWriter</strong>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="summary-row">
+                        <span>Harga Layanan</span>
+                        <span>Rp 0.0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Biaya Platform (0%)</span>
+                        <span>Rp 0</span>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="summary-row total-row">
+                        <span>Total Pembayaran</span>
+                        <span class="blue-text">Rp 0.0</span>
+                    </div>
+
+                    <div class="warning-box-small">
+                        <i class="fa-regular fa-comment-dots"></i>
+                        <p>Pembayaran dilakukan via WhatsApp dengan penyedia layanan</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

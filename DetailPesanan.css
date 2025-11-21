@@ -1,0 +1,236 @@
+/* --- Reset & Global --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #9ECBF7; /* Warna background biru langit sesuai foto */
+    color: #333;
+    padding-bottom: 50px;
+}
+
+/* --- Header / Navbar --- */
+header {
+    background-color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ff9f43;
+    line-height: 1;
+}
+.logo-icon { font-size: 18px; margin-bottom: 2px; }
+.logo-text { 
+    font-size: 10px; 
+    font-weight: 800; 
+    color: #2c3e50; 
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+}
+
+.nav-menu { display: flex; gap: 30px; }
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+}
+.nav-menu a.active { font-weight: 700; }
+
+.user-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    color: #333;
+}
+
+/* --- Main Content --- */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Judul Halaman */
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+.page-title i { font-size: 24px; cursor: pointer; }
+.page-title h1 { font-size: 28px; font-weight: 700; }
+
+/* --- Card Styles --- */
+.card {
+    background-color: #F8F9FA; /* Warna putih agak abu */
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd; /* Border halus */
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Card 1: Ringkasan */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.summary-item label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.summary-item .value {
+    font-size: 16px;
+    font-weight: 500;
+}
+.text-grey { color: #666; font-size: 14px !important; } /* Untuk ID #MINI... */
+.text-dark-grey { color: #444; }
+
+/* Card 2: Form Input (Readonly look) */
+.form-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.form-group:last-child { margin-bottom: 0; }
+
+label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+/* Input Box Styling */
+input[type="text"], 
+.textarea-mock, 
+.file-box {
+    background-color: #E6E6E6; /* Abu-abu input */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 12px 15px;
+    font-size: 14px;
+    color: #555;
+    width: 100%;
+    outline: none;
+}
+
+.textarea-mock {
+    height: 100px; /* Tinggi area deskripsi */
+    color: #777;
+}
+
+.file-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px; /* Lebar terbatas sesuai foto */
+    cursor: pointer;
+}
+
+/* Card 3: Timeline */
+.timeline {
+    position: relative;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 30px; /* Jarak antar item timeline */
+    position: relative;
+}
+
+/* Garis Penghubung (Line) */
+.timeline-item:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 17px; /* Posisi tengah icon */
+    top: 35px;
+    bottom: 0;
+    width: 3px;
+    background-color: #00e676; /* Warna garis hijau */
+    z-index: 0;
+}
+
+/* Untuk item terakhir garisnya beda atau hilang */
+.timeline-item:nth-last-child(2)::before {
+     /* Garis dari item ke-3 ke item ke-4 (pending) */
+    background-color: #00e676; 
+}
+
+/* Icon Wrapper */
+.icon-wrapper {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    z-index: 1; /* Agar di atas garis */
+    flex-shrink: 0;
+}
+
+.success {
+    background-color: #00e676; /* Hijau Check */
+}
+
+.pending {
+    background-color: #9ca3af; /* Abu-abu Clock */
+}
+
+.content h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.content p {
+    font-size: 13px;
+    color: #777;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .summary-grid {
+        grid-template-columns: 1fr 1fr; /* Jadi 2 kolom di HP */
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .file-box { width: 100%; }
+    header { padding: 15px 20px; }
+    .nav-menu { display: none; }
+}

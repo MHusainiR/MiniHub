@@ -1,0 +1,275 @@
+/* --- RESET & GLOBAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #cce7ff; /* Warna Background Biru Muda Halaman */
+}
+
+/* --- HEADER --- */
+header {
+    background-color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    color: #ff9f43;
+}
+.logo-icon i { font-size: 18px; }
+.logo-text { font-size: 10px; font-weight: 800; color: #2c3e50; display: flex; flex-direction: column; align-items: center; }
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+.nav-menu a.active {
+    color: #000;
+    border-bottom: 2px solid #000; /* Garis bawah menu aktif */
+}
+
+.user-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    color: #333;
+}
+
+/* --- MAIN CONTENT --- */
+main {
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.hero-section p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+/* Search Box Container */
+.search-container {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 900px;
+    max-width: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.search-input-wrapper {
+    flex: 2;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-input-wrapper i { color: #666; }
+.search-input-wrapper input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+}
+
+.filter-group {
+    display: flex;
+    gap: 10px;
+}
+
+.dropdown {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.btn-search {
+    background-color: #1a66ff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.btn-search:hover { background-color: #0051e6; }
+
+/* --- GRID LAYANAN --- */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 Kolom */
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Card Styles */
+.card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Card Header (Bagian Biru) */
+.card-header {
+    /* Gradient Biru seperti gambar */
+    background: linear-gradient(135deg, #7db1f5 0%, #2c7df8 100%); 
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.service-icon {
+    background-color: white;
+    color: #000;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.service-title h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+.service-title span {
+    font-size: 12px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Card Body (Bagian Putih) */
+.card-body {
+    padding: 20px;
+}
+
+.details-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.details-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.details-list li i {
+    width: 20px;
+    text-align: center;
+    color: #000; /* Icon hitam tegas */
+}
+
+.btn-detail {
+    width: 100%;
+    background-color: #1a66ff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-detail:hover {
+    background-color: #004bd6;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 Kolom di Tablet */
+    }
+    .search-container {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .search-input-wrapper {
+        flex: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-grid {
+        grid-template-columns: 1fr; /* 1 Kolom di HP */
+    }
+    header {
+        padding: 15px 20px;
+    }
+    .nav-menu {
+        display: none; /* Sembunyikan menu di HP sederhana */
+    }
+    main {
+        padding: 20px;
+    }
+}

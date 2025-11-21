@@ -1,0 +1,216 @@
+/* --- RESET & UMUM --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #dceeff; /* Warna latar belakang biru muda */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #f1f1f1; /* Abu-abu terang header */
+    padding: 15px 40px;
+    display: flex;
+    justify-content: center; /* Logo utama di tengah */
+    align-items: center;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Logo Kecil di Kiri Atas */
+.brand-mini-left {
+    position: absolute;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ff9f43;
+}
+
+.brand-mini-left i {
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+.brand-text-stack {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.9;
+    font-size: 9px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* Logo Utama Tengah */
+.main-logo {
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.text-orange { color: #ff9f43; }
+.text-dark { color: #2c3e50; }
+
+/* --- CONTAINER LOGIN --- */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-card {
+    background-color: #bce0fd; /* Warna biru kartu login */
+    width: 900px;
+    max-width: 95%;
+    border-radius: 10px;
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    align-items: center;
+}
+
+/* --- BAGIAN KIRI (GAMBAR) --- */
+.left-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-section img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+    mix-blend-mode: multiply; /* Agar background putih gambar menyatu dengan kartu */
+}
+
+/* --- BAGIAN KANAN (FORM) --- */
+.right-section {
+    flex: 1.2; /* Sedikit lebih lebar dari gambar */
+    display: flex;
+    flex-direction: column;
+}
+
+.header-text {
+    margin-bottom: 30px;
+}
+
+.header-text h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.header-text p {
+    font-size: 14px;
+    color: #333;
+    font-weight: 400;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    position: relative;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #ffffff;
+    outline: none;
+    color: #333;
+}
+
+input::placeholder {
+    color: #555;
+}
+
+/* Icon Mata Password */
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #000;
+}
+
+/* Tombol Login */
+.btn-login {
+    margin-top: 15px;
+    background-color: #1a66ff; /* Biru terang */
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.btn-login:hover {
+    background-color: #0051e6;
+}
+
+/* Footer */
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-footer a {
+    text-decoration: none;
+    color: #333;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsiveness untuk HP */
+@media (max-width: 768px) {
+    .login-card {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+    .left-section {
+        display: none; /* Sembunyikan gambar di layar kecil */
+    }
+    header {
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+    .brand-mini-left {
+        position: static;
+        flex-direction: row;
+        gap: 5px;
+    }
+}

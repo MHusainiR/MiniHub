@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesanan Saya - Mini Hub</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="pesananSaya.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="Explore.html">
+                <img src="Img/Logo.png" class="logo" alt="MiniHub" style="width:23px;height:41px;">
+            </a>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="Explore.html">Explore Service</a>
+            <a href="#" class="active">Pesanan Saya</a>
+        </nav>
+
+        <div class="user-icons">
+            <a href="#">
+                <i class="fa-regular fa-bell"></i>
+            </a>
+            <a href="Profil.html">
+                <i class="fa-regular fa-user"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div class="header-title">
+                <h1>Pesanan Saya</h1>
+                <p>Kelola pesanan aktif dan riwayat pembelian Anda.</p>
+            </div>
+            <button class="btn-new-order" onclick="window.location.href='Explore.html'">Buat Pesanan Baru</button>
+        </div>
+
+        <div class="tabs-container">
+            <div class="tab-item active" data-filter="semua">Semua</div>
+            <div class="tab-item" data-filter="menunggu-konfirmasi">Menunggu Konfirmasi</div>
+            <div class="tab-item" data-filter="dalam-proses">Dalam Proses</div>
+            <div class="tab-item" data-filter="menunggu-revisi">Menunggu Revisi</div>
+            <div class="tab-item" data-filter="selesai">Selesai</div>
+            <div class="tab-item" data-filter="dibatalkan">Dibatalkan</div>
+        </div>
+
+
+        <div class="orders-list">
+
+            <a href="DetailPesananDesain.html">
+                <div class="order-card" data-status="dalam-proses">
+                    <div class="card-top">
+                        <h2>Desain Poster</h2>
+                        <p class="sub-category">Desain Grafik</p>
+                        <a href="#" class="order-id">#MINI4712</a>
+                    </div>
+                    
+                    <div class="card-details">
+                        <div class="avatar-circle">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+    
+                        <div class="info-col">
+                            <small>Penyedia</small>
+                            <strong>Arnold</strong>
+                        </div>
+    
+                        <div class="info-col">
+                            <small>Total Pesanan</small>
+                            <strong>Rp 200.000</strong>
+                        </div>
+    
+                        <div class="info-col">
+                            <small>Deadline</small>
+                            <strong>25/12/2026</strong>
+                        </div>
+    
+                        <div class="status-col">
+                            <button class="btn-status">Dalam Proses</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="DetailPesananWriter.html">
+                <div class="order-card" data-status="dalam-proses">
+                    <div class="card-top">
+                        <h2>CopyWriter</h2>
+                        <p class="sub-category">Writer</p>
+                        <a href="#" class="order-id">#MINI4759</a>
+                    </div>
+                    
+                    <div class="card-details">
+                        <div class="avatar-circle">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <div class="info-col">
+                            <small>Penyedia</small>
+                            <strong>Ajeng</strong>
+                        </div>
+                        <div class="info-col">
+                            <small>Total Pesanan</small>
+                            <strong>Rp 55.000</strong>
+                        </div>
+                        <div class="info-col">
+                            <small>Deadline</small>
+                            <strong>17/08/2026</strong>
+                        </div>
+                        <div class="status-col">
+                            <button class="btn-status">Dalam Proses</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="DetailPesananFrontEnd.html">
+                <div class="order-card" data-status="menunggu-konfirmasi">
+                    <div class="card-top">
+                        <h2>FrontDev</h2>
+                        <p class="sub-category">IT</p>
+                        <a href="#" class="order-id">#MINI4679</a>
+                    </div>
+                    
+                    <div class="card-details">
+                        <div class="avatar-circle">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <div class="info-col">
+                            <small>Penyedia</small>
+                            <strong>Liam</strong>
+                        </div>
+                        <div class="info-col">
+                            <small>Total Pesanan</small>
+                            <strong>Rp 200.000</strong>
+                        </div>
+                        <div class="info-col">
+                            <small>Deadline</small>
+                            <strong>25/12/2026</strong>
+                        </div>
+                        <div class="status-col">
+                            <button class="btn-status">Menunggu Konfirmasi</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </main>
+    <script>
+        const tabs = document.querySelectorAll('.tab-item');
+        const cards = document.querySelectorAll('.order-card');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+
+                // Hilangkan active dari semua tab
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const filter = tab.getAttribute('data-filter');
+
+                cards.forEach(card => {
+                    const status = card.getAttribute('data-status');
+
+                    // Filter logic
+                    if (filter === "semua" || filter === status) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+
+            });
+        });
+    </script>
+
+</body>
+</html>

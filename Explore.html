@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Service - Mini Hub</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="Explore.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="Explore.html">
+                <img src="Img/Logo.png" class="logo" alt="MiniHub" style="width:23px;height:41px;">
+            </a>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="#" class="active">Explore Service</a>
+            <a href="PesananSaya.html">Pesanan Saya</a>
+        </nav>
+
+        <div class="user-icons">
+            <a href="#">
+                <i class="fa-regular fa-bell"></i>
+            </a>
+            <a href="Profil.html">
+                <i class="fa-regular fa-user"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h1>Temukan Talenta yang Tepat untuk Pekerjaan Anda</h1>
+            <p>Mini Hub mempermudah Anda menemukan mahasiswa dengan skill yang sesuai kebutuhan Anda.</p>
+
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <i class="fa fa-search"></i>
+                    <input type="text" placeholder="Cari Layanan">
+                </div>
+                
+                <div class="filter-group">
+                    <select class="dropdown">
+                        <option>Harga</option>
+                        <option>&lt;Rp100.000</option>
+                        <option>Rp100.000-500.000</option>
+                        <option>Rp500.000-1.000.000</option>
+                        <option>Rp1.000.000-2.000.000</option>
+                        <option>Rp2.000.000&gt;</option>
+                    </select>
+                    <select class="dropdown">
+                        <option class="kategori-item active" data-filter="semua">Kategori</option>
+                        <option class="kategori-item" data-filter="IT">IT</option>
+                        <option class="kategori-item" data-filter="Desain">Desain</option>
+                        <option class="kategori-item" data-filter="Editor">Editor</option>
+                        <option class="kategori-item" data-filter="Data">Data</option>
+                        <option class="kategori-item" data-filter="Writer">Writer</option>
+                    </select>
+                </div>
+
+                <button class="btn-search">Cari Layanan</button>
+            </div>
+        </section>
+
+        <section class="service-grid">
+            
+            <div class="card" kategori="IT">
+                <div class="card-header">
+                    <div class="service-icon"><i class="fa fa-code"></i></div>
+                    <div class="service-title">
+                        <h3>Frontend Developer</h3>
+                        <span>Nama Penjual Jasa</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <ul class="details-list">
+                        <li><i class="fa-regular fa-clock"></i> 3 - 5 Hari</li>
+                        <li><i class="fa-solid fa-money-bill-wave"></i> Rp 200.000</li>
+                        <li><i class="fa-solid fa-briefcase"></i> 279 Penjualan</li>
+                        <li><i class="fa-regular fa-star"></i> 4.9</li>
+                    </ul>
+                    <button class="btn-detail" onclick="window.location.href='DlFrontDev.html'">Lihat Detail</button>
+                </div>
+            </div>
+
+            <div class="card" kategori="Data">
+                <div class="card-header">
+                    <div class="service-icon"><i class="fa fa-database"></i></div>
+                    <div class="service-title">
+                        <h3>Data Analyst</h3>
+                        <span>Nama Penjual Jasa</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <ul class="details-list">
+                        <li><i class="fa-regular fa-clock"></i> 3 - 5 Hari</li>
+                        <li><i class="fa-solid fa-money-bill-wave"></i> Negotiable</li>
+                        <li><i class="fa-solid fa-briefcase"></i> 240 Penjualan</li>
+                        <li><i class="fa-regular fa-star"></i> 4.9</li>
+                    </ul>
+                    <button class="btn-detail" onclick="window.location.href='DlDataAnalyst.html'">Lihat Detail</button>
+                </div>
+            </div>
+
+            <div class="card" kategori="Writer">
+                <div class="card-header">
+                    <div class="service-icon"><i class="fa fa-language"></i></div>
+                    <div class="service-title">
+                        <h3>Translator Dokumen</h3>
+                        <span>Nama Penjual Jasa</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <ul class="details-list">
+                        <li><i class="fa-regular fa-clock"></i> 3 - 5 Hari</li>
+                        <li><i class="fa-solid fa-money-bill-wave"></i> Negotiable</li>
+                        <li><i class="fa-solid fa-briefcase"></i> 300 Penjualan</li>
+                        <li><i class="fa-regular fa-star"></i> 4.9</li>
+                    </ul>
+                    <button class="btn-detail" onclick="window.location.href='DlTranslator.html'">Lihat Detail</button>
+                </div>
+            </div>
+
+            <div class="card" kategori="Desain">
+                <div class="card-header">
+                    <div class="service-icon"><i class="fa fa-palette"></i></div>
+                    <div class="service-title">
+                        <h3>Designer Poster</h3>
+                        <span>Nama Penjual Jasa</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <ul class="details-list">
+                        <li><i class="fa-regular fa-clock"></i> 3 - 5 Hari</li>
+                        <li><i class="fa-solid fa-money-bill-wave"></i> Rp200.000</li>
+                        <li><i class="fa-solid fa-briefcase"></i> 234 Penjualan</li>
+                        <li><i class="fa-regular fa-star"></i> 4.9</li>
+                    </ul>
+                    <button class="btn-detail" onclick="window.location.href='DlPoster.html'">Lihat Detail</button>
+                </div>
+            </div>
+
+            <div class="card" kategori ="Editor">
+                <div class="card-header">
+                    <div class="service-icon"><i class="fa fa-film"></i></div>
+                    <div class="service-title">
+                        <h3>Video Editor</h3>
+                        <span>Nama Penjual Jasa</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <ul class="details-list">
+                        <li><i class="fa-regular fa-clock"></i> 3 - 5 Hari</li>
+                        <li><i class="fa-solid fa-money-bill-wave"></i> Negotiable</li>
+                        <li><i class="fa-solid fa-briefcase"></i> 220 Penjualan</li>
+                        <li><i class="fa-regular fa-star"></i> 4.9</li>
+                    </ul>
+                    <button class="btn-detail" onclick="window.location.href='DlVideoEditor.html'">Lihat Detail</button>
+                </div>
+            </div>
+
+            <div class="card" kategori="Writer">
+                <div class="card-header">
+                    <div class="service-icon"><i class="fa fa-pen-nib"></i></div>
+                    <div class="service-title">
+                        <h3>Copywriter</h3>
+                        <span>Nama Penjual Jasa</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <ul class="details-list">
+                        <li><i class="fa-regular fa-clock"></i> 3 - 5 Hari</li>
+                        <li><i class="fa-solid fa-money-bill-wave"></i> Negotiable</li>
+                        <li><i class="fa-solid fa-briefcase"></i> 200 Penjualan</li>
+                        <li><i class="fa-regular fa-star"></i> 4.9</li>
+                    </ul>
+                    <button class="btn-detail" onclick="window.location.href='DlCopyWriter.html'">Lihat Detail</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script>
+        const selectHarga = document.querySelectorAll('.filter-group select')[0];
+        const selectKategori = document.querySelectorAll('.filter-group select')[1];
+        const cards = document.querySelectorAll('.card');
+
+        function applyFilters() {
+            const kategoriFilter = selectKategori.selectedOptions[0].dataset.filter;
+            const hargaFilter = selectHarga.value;
+
+            cards.forEach(card => {
+                const kategori = card.getAttribute('kategori');
+
+                // Ambil harga dari card
+                const hargaText = card.querySelector('.fa-money-bill-wave').parentElement.innerText;
+                let hargaValue = hargaText.replace(/[^0-9]/g, ""); // ambil angka
+                hargaValue = hargaValue === "" ? null : parseInt(hargaValue);
+
+                let kategoriMatch = (kategoriFilter === "semua" || kategoriFilter === kategori);
+                let hargaMatch = true;
+
+                // Filter harga
+                if (hargaValue !== null) {
+                    switch (hargaFilter) {
+                        case "<Rp100.000":
+                            hargaMatch = hargaValue < 100000;
+                            break;
+                        case "Rp100.000-500.000":
+                            hargaMatch = hargaValue >= 100000 && hargaValue <= 500000;
+                            break;
+                        case "Rp500.000-1.000.000":
+                            hargaMatch = hargaValue >= 500000 && hargaValue <= 1000000;
+                            break;
+                        case "Rp1.000.000-2.000.000":
+                            hargaMatch = hargaValue >= 1000000 && hargaValue <= 2000000;
+                            break;
+                        case "Rp2.000.000>":
+                            hargaMatch = hargaValue > 2000000;
+                            break;
+                    }
+                }
+
+                if (kategoriMatch && hargaMatch) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        selectKategori.addEventListener('change', applyFilters);
+        selectHarga.addEventListener('change', applyFilters);
+    </script>
+</body>
+</html>

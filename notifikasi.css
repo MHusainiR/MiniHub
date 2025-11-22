@@ -1,0 +1,154 @@
+/* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #d6e8f9;
+      color: #000;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    header {
+        background-color: white;
+        padding: 15px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    .logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #ff9f43;
+        line-height: 1;
+    }
+    .logo-icon { font-size: 18px; margin-bottom: 2px; }
+    .logo-text { 
+        font-size: 10px; 
+        font-weight: 800; 
+        color: #2c3e50; 
+        text-align: center;
+        display: flex; 
+        flex-direction: column; 
+    }
+
+    .nav-menu { display: flex; gap: 40px; }
+    .nav-menu a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    .user-icons {
+        display: flex;
+        gap: 20px;
+        font-size: 22px;
+        color: #333;
+    }
+    /* Main content */
+    main {
+      padding: 2rem 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    main h1 {
+      font-weight: 900;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Notification list */
+    .notif {
+    background-color: #95c5ff;
+    border: 1px solid #2962ff;
+    padding: 20px 24px; /* lebih luas */
+    border-radius: 10px;
+    margin-bottom: 16px;
+    position: relative;
+    color: #000d31;
+    }
+
+    .notif.unread {
+      background-color: #95c5ff;
+      border-color: #2962ff;
+      color: #000d31;
+    }
+
+    .notif.read {
+      background-color: #f7f9fc;
+      border-color: #c4c7cc;
+      color: #707070;
+    }
+    
+    .notif .icon-info {
+    position: absolute;
+    left: 16px;
+    top: 12px; 
+    font-size: 18px;
+    color: inherit;
+    line-height: 1;
+    }
+
+    .notif.unread .icon-info {
+      color: #2962ff;
+    }
+
+    .notif .content {
+      margin-left: 30px;
+    }
+
+    .notif .content .title {
+      font-weight: 900;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .notif .content .desc {
+      font-weight: 400;
+      font-size: 0.875rem;
+      line-height: 1.4rem;
+      color: inherit;
+      opacity: 0.7;
+      margin-bottom: 6px;
+    }
+
+    .notif .content .time {
+      font-size: 0.75rem;
+      opacity: 0.75;
+      font-weight: 400;
+    }
+
+    .notif .time-right {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      font-size: 0.75rem;
+      font-weight: 400;
+      opacity: 0.75;
+      color: inherit;
+    }
+
+    /* Blue dot indicator for unread */
+    .notif.unread::after {
+      content: "";
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      background-color: #2962ff;
+      border-radius: 50%;
+    }

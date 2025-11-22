@@ -1,7 +1,10 @@
 /* Reset & base */
-    * {
-      box-sizing: border-box;
-    }
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: 'Poppins', sans-serif;
+   }
     
     body {
       margin: 0;
@@ -151,4 +154,5 @@
       height: 10px;
       background-color: #2962ff;
       border-radius: 50%;
+
     }

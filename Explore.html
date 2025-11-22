@@ -49,11 +49,11 @@
                 <div class="filter-group">
                     <select class="dropdown">
                         <option>Harga</option>
-                        <option>&lt;Rp100.000</option>
-                        <option>Rp100.000-500.000</option>
+                        <option>&leq; Rp100.000</option>
+                        <option>Rp100.000-250.000</option>
+                        <option>Rp250.000-500.000</option>
                         <option>Rp500.000-1.000.000</option>
-                        <option>Rp1.000.000-2.000.000</option>
-                        <option>Rp2.000.000&gt;</option>
+                        <option>Rp1.000.000&geq;</option>
                     </select>
                     <select class="dropdown">
                         <option class="kategori-item active" data-filter="semua">Kategori</option>
@@ -82,7 +82,7 @@
                 <div class="card-body">
                     <ul class="details-list">
                         <li><i class="fa-regular fa-clock"></i> 3 - 5 Hari</li>
-                        <li><i class="fa-solid fa-money-bill-wave"></i> Rp 200.000</li>
+                        <li><i class="fa-solid fa-money-bill-wave"></i> Rp600.000</li>
                         <li><i class="fa-solid fa-briefcase"></i> 279 Penjualan</li>
                         <li><i class="fa-regular fa-star"></i> 4.9</li>
                     </ul>
@@ -101,7 +101,7 @@
                 <div class="card-body">
                     <ul class="details-list">
                         <li><i class="fa-regular fa-clock"></i> 3 - 5 Hari</li>
-                        <li><i class="fa-solid fa-money-bill-wave"></i> Negotiable</li>
+                        <li><i class="fa-solid fa-money-bill-wave"></i> Rp300.000</li>
                         <li><i class="fa-solid fa-briefcase"></i> 240 Penjualan</li>
                         <li><i class="fa-regular fa-star"></i> 4.9</li>
                     </ul>
@@ -120,7 +120,7 @@
                 <div class="card-body">
                     <ul class="details-list">
                         <li><i class="fa-regular fa-clock"></i> 3 - 5 Hari</li>
-                        <li><i class="fa-solid fa-money-bill-wave"></i> Negotiable</li>
+                        <li><i class="fa-solid fa-money-bill-wave"></i> Rp50.000</li>
                         <li><i class="fa-solid fa-briefcase"></i> 300 Penjualan</li>
                         <li><i class="fa-regular fa-star"></i> 4.9</li>
                     </ul>
@@ -139,7 +139,7 @@
                 <div class="card-body">
                     <ul class="details-list">
                         <li><i class="fa-regular fa-clock"></i> 3 - 5 Hari</li>
-                        <li><i class="fa-solid fa-money-bill-wave"></i> Rp200.000</li>
+                        <li><i class="fa-solid fa-money-bill-wave"></i> Rp80.000</li>
                         <li><i class="fa-solid fa-briefcase"></i> 234 Penjualan</li>
                         <li><i class="fa-regular fa-star"></i> 4.9</li>
                     </ul>
@@ -201,29 +201,34 @@
 
                 // Ambil harga dari card
                 const hargaText = card.querySelector('.fa-money-bill-wave').parentElement.innerText;
-                let hargaValue = hargaText.replace(/[^0-9]/g, ""); // ambil angka
+                let hargaValue = hargaText.replace(/[^0-9]/g, "");
                 hargaValue = hargaValue === "" ? null : parseInt(hargaValue);
 
                 let kategoriMatch = (kategoriFilter === "semua" || kategoriFilter === kategori);
                 let hargaMatch = true;
 
-                // Filter harga
+                // Filter harga BARU
                 if (hargaValue !== null) {
                     switch (hargaFilter) {
-                        case "<Rp100.000":
-                            hargaMatch = hargaValue < 100000;
+                        case "≤ Rp100.000":
+                            hargaMatch = hargaValue <= 100000;
                             break;
-                        case "Rp100.000-500.000":
-                            hargaMatch = hargaValue >= 100000 && hargaValue <= 500000;
+
+                        case "Rp100.000-250.000":
+                            hargaMatch = hargaValue >= 100000 && hargaValue <= 250000;
                             break;
-                        case "Rp500.000-1.000.000":
+
+                        case "Rp250.000-500.000":
+                            hargaMatch = hargaValue >= 250000 && hargaValue <= 500000;
+                            break;
+
+                        case "Rp500.000-1.000.000":  // (ada salah ketik "500.0000", tetap aman)
                             hargaMatch = hargaValue >= 500000 && hargaValue <= 1000000;
                             break;
-                        case "Rp1.000.000-2.000.000":
-                            hargaMatch = hargaValue >= 1000000 && hargaValue <= 2000000;
-                            break;
-                        case "Rp2.000.000>":
-                            hargaMatch = hargaValue > 2000000;
+
+                        case "Rp1.000.000≥":
+                        case "Rp1.000.000≥":
+                            hargaMatch = hargaValue >= 1000000;
                             break;
                     }
                 }
